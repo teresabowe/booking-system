@@ -33,27 +33,29 @@
           <li class="nav-item">
             <a class="nav-link active px-4" aria-current="page" href="{% url 'home' %}">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link px-4" href="#location">Location</a>
-        </li>
           {% if user.is_authenticated %}
-          <li class="nav-item">
+            <li class="nav-item"> 
               <a class="nav-link px-4" href="{% url 'account_logout' %}">Logout</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-4" href="">My Bookings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-4" href="">Add a Booking</a>
-          </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="">My Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="">Add a Booking</a>
+            </li>
+            <li class="nav-item ml-4"> 
+              <img src="{% static 'img/user.png' %}" width="30" height="30" alt="">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4">{{user.username}}</a>
+            </li>
           {% else %}
-          <li class="nav-item">
-              <a class="nav-link px-4" href="{% url 'account_signup' %}">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-4" href="{% url 'account_login' %}">Login</a>
-          </li>
-        
+            <li class="nav-item">
+                <a class="nav-link px-4" href="{% url 'account_signup' %}">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="{% url 'account_login' %}">Login</a>
+            </li>
           {% endif %}
         </ul>
       </div>
