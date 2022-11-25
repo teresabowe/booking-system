@@ -93,6 +93,14 @@ body {
     letter-spacing: -.05rem;
   }
   
+  /* AUTHENTICATION
+  -------------------------------------------------- */
+
+  .btn-signup {
+    background-color: #007bff;
+    color:#fff;
+  }
+
   /* Sticky footer styles
   -------------------------------------------------- */
   html {
