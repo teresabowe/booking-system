@@ -4,7 +4,7 @@
 
 <div class="text-center p-3 mt-3">
     <h2>My Bookings</h2>
-    <h4 class="mt-5">Add a Booking<a href=""><i class="bi bi-plus-square add-button ml-3"></i></a></h4>
+    <h4 class ="mt-5">Add a Booking   <a href="{% url 'add_booking' %}"><i class="bi bi-plus-square add-button"></i></a></h4>
 </div>
 
 <div class="table-responsive">
@@ -27,7 +27,7 @@
                 <td>{{booking.desk.floor}}</td>
                 <td>{{booking.desk.description}}</td> 
                 <td><a href=''><i class="bi bi-pencil-square"></i></a></td>  
-                <td><a href=''><i class="bi bi-x-circle"></i></a></td>  
+                <td><a href='{% url "delete_booking" booking.id %}'><i class="bi bi-x-circle"></i></a></td>  
             </tr>
         </tbody>
         {% endfor %}

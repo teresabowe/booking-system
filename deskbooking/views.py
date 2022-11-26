@@ -2,7 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 from . forms import AddForm
 from django.views import generic
 from .models import Booking, Desk
@@ -47,6 +47,17 @@ class AddBookingView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.sequence = Booking.objects.filter(desk_user=self.request.user)
         return super().form_valid(form)
+
+
+class DeleteBooking(LoginRequiredMixin, DeleteView):
+    """
+    Delete Bookings
+    """
+    login_url = '../accounts/login/'
+    redirect_field_name = 'account_login'
+    model = Booking
+    template_name = "booking_confirm_delete.html"
+    success_url = '/view_bookings/'
 
 
 @login_required()
