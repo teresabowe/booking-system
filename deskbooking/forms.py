@@ -10,3 +10,12 @@ class AddForm(forms.ModelForm):
         widgets = {
             'desk_booking_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}), 'desk_user': forms.HiddenInput,
         }
+
+
+class BookingUpdateForm(forms.ModelForm):
+
+    desk_booking_date = forms.DateField(disabled=True)
+
+    class Meta:
+        model = Booking
+        fields = 'desk_booking_date', 'desk'

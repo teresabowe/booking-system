@@ -2,8 +2,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic.edit import CreateView, DeleteView
-from . forms import AddForm
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from . forms import AddForm, BookingUpdateForm
 from django.views import generic
 from .models import Booking, Desk
 
@@ -57,6 +57,19 @@ class DeleteBooking(LoginRequiredMixin, DeleteView):
     redirect_field_name = 'account_login'
     model = Booking
     template_name = "booking_confirm_delete.html"
+    success_url = '/view_bookings/'
+
+
+class UpdateBooking(LoginRequiredMixin, UpdateView):
+    """
+    Update Bookings
+    """
+    login_url = '../accounts/login/'
+    redirect_field_name = 'account_login'
+    model = Booking
+    form_class = BookingUpdateForm
+    template_name = "booking_confirm_update.html"
+    context_object_name = "booking"
     success_url = '/view_bookings/'
 
 

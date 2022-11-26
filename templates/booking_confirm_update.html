@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Update booking" %}{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5 text-center shadow-lg rounded">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2 ">
+            <h3>{% trans "Change Desk for this Booking" %}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mt-3 mb-5 offset-md-2">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" value="Confirm">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
