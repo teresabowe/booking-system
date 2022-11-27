@@ -25,6 +25,7 @@ body {
   .carousel {
     margin-bottom: 4rem;
   }
+
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
     bottom: 3rem;
@@ -37,6 +38,7 @@ body {
     height: 32rem;
     background-color: #777;
   }
+
   .carousel-item > img {
     position: absolute;
     top: 0;
@@ -61,7 +63,7 @@ body {
   .text-right p {
     margin-right: 8rem;
   }
-  
+
   /* MARKETING CONTENT
   -------------------------------------------------- */
   
@@ -70,9 +72,11 @@ body {
     margin-bottom: 1.5rem;
     text-align: center;
   }
+
   .marketing h2 {
     font-weight: 400;
   }
+
   .marketing .col-lg-4 p {
     margin-right: .75rem;
     margin-left: .75rem;
@@ -107,6 +111,7 @@ body {
     position: relative;
     min-height: 100%;
   }
+
   body {
     margin-bottom: 60px; /* Margin bottom by footer height */
   }
@@ -167,4 +172,15 @@ body {
     }
   }
 
-  
+  /* For smaller size screens size from 480px wide and down */
+
+  @media only screen and (max-width:480px) {
+
+    .first-slide {
+      transform: translate(-40%);
+    }
+
+    .second-slide, .third-slide {
+      transform: translate(-20%);
+    }
+  }
