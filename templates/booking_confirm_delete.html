@@ -23,7 +23,7 @@
                 {% csrf_token %}
                 {{ form|crispy }} 
                 <p>Are you sure you want to delete your booking for {{ booking.desk_booking_date }}?</p>
-                <input type="submit" value="Confirm">
+                <input type="submit" value="Confirm" class="btn btn-signup right mb-5">
             </form>
         </div>
     </div>

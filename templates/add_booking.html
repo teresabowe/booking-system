@@ -23,8 +23,7 @@
           <form method="post" id="addaform" data-desks-url="{% url 'ajax_load_desks' %}" novalidate>
               {% csrf_token %} 
               {{ form|crispy }} 
-              <input type="submit" value="Save">
-              <a href="{% url 'add_booking' %}"> Reload </a>
+              <input type="submit" value="Save" class="btn btn-signup right mb-5">
           </form> 
       </div>
   </div>

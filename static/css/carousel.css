@@ -8,6 +8,10 @@ body {
     color: #5a5a5a;
   }
   
+  h1 {
+    font-size: 2.5rem;
+  }
+  
   .navbar-nav
   {
     font-size: larger;
@@ -16,6 +20,19 @@ body {
   .navbar-brand
   {
     font-size: x-large;
+  }
+
+  .btn {
+    background-color: #406735;
+    color:white;
+    font-weight: 400;
+    font-family: "Segoe UI", Roboto, Arial;
+    
+  }
+
+  .btn:hover {
+    color:white;
+    background-color: #699e5a;
   }
 
   /* CUSTOMIZE THE CAROUSEL
@@ -101,7 +118,7 @@ body {
   -------------------------------------------------- */
 
   .btn-signup {
-    background-color: #007bff;
+    background-color: #406735;
     color:#fff;
   }
 
@@ -128,6 +145,7 @@ body {
   -------------------------------------------------- */
   h4 .add-button {
     color: darkgreen;
+    
   }
 
   .p-3 {
@@ -140,16 +158,18 @@ body {
   }
 
   thead th {
-    background-color: #426838;
+    background-color: #406735;
     color: white;
   }
 
   tbody td {
-    background-color: #DBE1D5;
+    background-color: #d1e0e2;
   }
-  
-  
-  
+
+  .bi-x-circle {
+    color: #f1698e;
+  }
+    
   /* RESPONSIVE CSS
   -------------------------------------------------- */
   

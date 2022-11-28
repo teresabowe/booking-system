@@ -16,7 +16,7 @@
       <div class="container">
         <div class="carousel-caption d-inline">
           <h1>Book a workspace with us.</h1>
-          <p><a class="btn btn-lg btn-primary" href="{% url 'account_login' %}" role="button">Login</a></p> 
+          <p><a class="btn btn-lg" href="{% url 'account_login' %}" role="button">Login</a></p> 
         </div>
       </div>
     </div>
@@ -24,8 +24,8 @@
       <img class="second-slide" src="{% static 'img/conference-table-593355_1920.jpg' %}" alt="Second slide">
       <div class="container">
         <div class="carousel-caption">
-          <h1>Our workspaces.</h1>
-          <p><a class="btn btn-lg btn-primary" href="#gallery" role="button">Gallery.</a></p>
+          <h1>Private offices and coworking spaces.</h1>
+          <p><a class="btn btn-lg" href="#gallery" role="button">Options</a></p>
         </div>
       </div>
     </div>
@@ -33,8 +33,8 @@
       <img class="third-slide" src="{% static 'img/office-workspace-6952950_1920.jpg' %}" alt="Third slide">
       <div class="container">
         <div class="carousel-caption">
-          <h1>A premium location in the heart of Dublin city.</h1>
-          <p><a class="btn btn-lg btn-primary" href="#location" role="button">Our location</a></p>
+          <h1>Premium location in the heart of Dublin city.</h1>
+          <p><a class="btn btn-lg" href="#location" role="button">Location</a></p>
         </div>
       </div>
     </div>
@@ -53,8 +53,9 @@
       <!-- Marketing messaging and featurettes
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
-      <h1 class="text-center mb-5 p-3" id="gallery">Our Spaces</h1>
-
+      <h1 class="text-center mb-5 p-3" id="gallery">Our Office Spaces</h1>
+      
+      </div>
       <div class="container marketing">
         <!-- Three columns of text below the carousel -->
         <div class="row">
@@ -62,19 +63,19 @@
             <img class="img-thumbnail" src="{% static 'img/entrepreneur-593361_1920.jpg' %}" alt="Generic placeholder image">
             <h2 class="pt-3">Breakout Space</h2>
             <p>This is an informal space open to everyone, including visitors and partners. This area is separate from the usual working area. Designed for quick chats and spontaneous meetings, it is also usually an area for employees to relax, socialise or eat lunch.  We have 10 breakout spaces at our location.  A meeting room or desk booking is required.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">Login &raquo;</a></p>
+            <p><a class="btn" href="{% url 'account_login' %}" role="button">Login &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img class="img-thumbnail" src="{% static 'img/meeting-594091_1920.jpg' %}" alt="Generic placeholder image">
             <h2  class="pt-3">Meeting Rooms</h2>
             <p>A room, typically within a business environment, which is provided for singular events such as business conferences and meetings.  We have 8 meeting rooms with capacity for between 8 and 20 people.  Meeting attendees can avail of our onsite catering services and cafe while attending meetings.  Booking is required. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">Login &raquo;</a></p>
+            <p><a class="btn" href="{% url 'account_login' %}" role="button">Login &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img class="img-thumbnail" src="{% static 'img/office-594119_1920.jpg' %}" alt="Generic placeholder image">
             <h2  class="pt-3">Coworking Office</h2>
             <p>A working environment which provides office facilities for a variety of different people, from different businesses. They may be employees working out of the office, or freelancers and contractors.  We have 50 coworking spaces available.  This typically a desk space with access to breakout spaces and catering services.  Booking is reqired.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">Login &raquo;</a></p>
+            <p><a class="btn" href="{% url 'account_login' %}" role="button">Login &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
