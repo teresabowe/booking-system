@@ -14,17 +14,56 @@
 <div class="container mt-5 text-center shadow-lg rounded">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2 ">
-            <h3>{% trans "Change Desk for this Booking" %}</h3>
+            <h3>{% trans "Change this Booking" %}</h3>
+            <p>You are about to change your booking for desk {{ booking.desk}} on {{ booking.desk_booking_date }}.</p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-8 mt-3 mb-5 offset-md-2">
-            <form action="" method="post">
+            <form method="post" id="addaform" data-desks-url="{% url 'ajax_load_desks' %}" novalidate>
                 {% csrf_token %}
                 {{ form|crispy }}
-                <input type="submit" value="Confirm" class="btn btn-signup right mb-5">
+                <input type="submit" value="Save" class="btn btn-signup right mb-5">
             </form>
         </div>
     </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript"></script>
+
+<script>
+
+  $("input").change(function () {
+    var url = $("#addaform").attr("data-desks-url");  
+    var dateID = $(this).val();  
+          
+    $.ajax({                       
+      url: url,                  
+        data: {
+          'desk_booking_date': dateID      
+        },
+        success: function (data) {  
+          $("#id_desk").html(data);  
+        }
+      });
+    });
+
+    $(document).ready(function() {
+      var url = $("#addaform").attr("data-desks-url"); 
+      var dateID = $("#id_desk_booking_date").attr('value')
+      console.log("herere===" + dateID)
+
+      $.ajax({                       
+      url: url,                  
+        data: {
+          'desk_booking_date': dateID      
+        },
+        success: function (data) {  
+          $("#id_desk").html(data);  
+        }
+      });
+    });
+</script>
+
 {% endblock %}
