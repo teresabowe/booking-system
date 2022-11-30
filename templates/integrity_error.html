@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+ 
+        <div class="container mt-5 text-center rounded alert alert-block alert-danger col-md-8 mt-3 mb-5 offset-md-2">
+            <p>There was an error updating the database. {{err}}</p>
+            <p>Please return to view your <a href="{% url 'view_bookings' %}"> bookings</a> to retry.</p>            
+        </div>
+
+{%endblock%}

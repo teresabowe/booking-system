@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import handler500, handler404
 
 
 urlpatterns = [
@@ -22,3 +23,6 @@ urlpatterns = [
     path("", include("deskbooking.urls"), name="deskbooking-urls"),
     path("accounts/", include("allauth.urls")),
 ]
+
+handler500 = 'deskbooking.views.handler500'
+handler404 = 'deskbooking.views.handler404'

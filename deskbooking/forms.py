@@ -14,8 +14,6 @@ class AddForm(forms.ModelForm):
 
 class BookingUpdateForm(forms.ModelForm):
 
-    # desk_booking_date = forms.DateField(disabled=True)
-
     class Meta:
         model = Booking
         fields = ('desk_booking_date', 'desk')

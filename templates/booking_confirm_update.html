@@ -14,8 +14,8 @@
 <div class="container mt-5 text-center shadow-lg rounded">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2 ">
-            <h3>{% trans "Change this Booking" %}</h3>
-            <p>You are about to change your booking for desk {{ booking.desk}} on {{ booking.desk_booking_date }}.</p>
+            <h3>{% trans "Update this Booking" %}</h3>
+            <p>You are about to update your booking for desk {{ booking.desk}} on {{ booking.desk_booking_date }}.</p>
         </div>
     </div>
     <div class="row">
@@ -52,7 +52,6 @@
     $(document).ready(function() {
       var url = $("#addaform").attr("data-desks-url"); 
       var dateID = $("#id_desk_booking_date").attr('value')
-      console.log("herere===" + dateID)
 
       $.ajax({                       
       url: url,                  
