@@ -8,7 +8,9 @@ class AddForm(forms.ModelForm):
         model = Booking
         fields = ('desk_user', 'desk_booking_date', 'desk')
         widgets = {
-            'desk_booking_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}), 'desk_user': forms.HiddenInput,
+            'desk_booking_date': forms.DateInput
+            (attrs={'class': 'form-control', 'type': 'date'}),
+            'desk_user': forms.HiddenInput,
         }
 
 
@@ -18,5 +20,7 @@ class BookingUpdateForm(forms.ModelForm):
         model = Booking
         fields = ('desk_booking_date', 'desk')
         widgets = {
-            'desk_booking_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}), 'desk_user': forms.HiddenInput,
+            'desk_booking_date': forms.DateInput
+            (attrs={'class': 'form-control', 'type': 'date'}),
+            'desk_user': forms.HiddenInput,
         }

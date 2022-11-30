@@ -48,7 +48,8 @@ class AddBookingView(LoginRequiredMixin, CreateView):
         return {'desk_user': self.request.user}
 
     def form_valid(self, form):
-        form.instance.sequence = Booking.objects.filter(desk_user=self.request.user)
+        form.instance.sequence = \
+            Booking.objects.filter(desk_user=self.request.user)
         return super().form_valid(form)
 
 
@@ -80,16 +81,16 @@ class UpdateBooking(LoginRequiredMixin, UpdateView):
         try:
             return super(UpdateBooking, self).form_valid(form)
         except IntegrityError as err:
-            err = 'A booking with this desk booking date already exists for you.'
+            err = 'A booking with this booking date already exists for you.'
             template_name = "integrity_error.html"
             return render(request, template_name, context={'err': err})
 
 
-def handler500(request, template_name = 'handler_500.html'):
+def handler500(request, template_name='handler_500.html'):
     return render(request, template_name)
 
 
-def handler404(request, template_name = 'handler_404.html'):
+def handler404(request, template_name='handler_404.html'):
     return render(request, template_name)
 
 
@@ -99,9 +100,11 @@ def load_desks(request):
     Create queryset for add booking dropdown
     """
     desk_booking_date_field = request.GET.get('desk_booking_date')
-    bookings = Booking.objects.values_list('desk', flat=True).filter(desk_booking_date=desk_booking_date_field)
+    bookings = Booking.objects.values_list('desk', flat=True)\
+        .filter(desk_booking_date=desk_booking_date_field)
     desks = Desk.objects.values_list('id', flat=True)
     pk_list = desks.difference(bookings)
     queryset = Desk.objects.filter(pk__in=pk_list)
 
-    return render(request, 'desk_dropdown_list_options.html', {'mydesks': queryset})
+    return render(request, 'desk_dropdown_list_options.html',
+                  {'mydesks': queryset})
