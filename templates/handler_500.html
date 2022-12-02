@@ -1,6 +1,10 @@
+{% extends "base.html" %}
 
-<div>
-    <p>The server encountered an unexpected condition that prevented it from fulfilling the request.</p>
-    <p>You may have received this error as a result of duplicate entry in the bookings database i.e. selecting a date with a desk already assigned to you.</p>
+{% block content %}
+
+<div class="container mt-5 text-center rounded alert alert-block alert-danger col-md-8 mt-3 mb-5 offset-md-2">
+    <p>Error 500! The server encountered an unexpected condition that prevented it from fulfilling the request.</p>
     <p>Please return to the <a href="{% url 'add_booking' %}">booking page </a> or the <a href="{% url 'home' %}"> home page</a> to retry.</p>
 </div>
+
+{% endblock %}

@@ -1,5 +1,10 @@
+{% extends "base.html" %}
 
-<div>
-    <p>You may have recevied this error as a result of a page or file not being found.</p>
+{% block content %}
+
+<div class="container mt-5 text-center rounded alert alert-block alert-danger col-md-8 mt-3 mb-5 offset-md-2">
+    <p>Error 404! You may have recevied this error as a result of a page or file not being found.</p>
     <p>Please return to the <a href="{% url 'home' %}"> home page.</p>
 </div>
+
+{% endblock %}
