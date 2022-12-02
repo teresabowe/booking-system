@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -8,6 +9,8 @@ from django.views import generic
 from django.db import IntegrityError
 from django.shortcuts import render
 from django.http import HttpRequest
+from django.contrib import messages
+
 from .models import Booking, Desk
 
 
@@ -33,7 +36,7 @@ class BookingsList(LoginRequiredMixin, generic.ListView):
          order_by('desk_booking_date')
 
 
-class AddBookingView(LoginRequiredMixin, CreateView):
+class AddBookingView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     """
     Add Bookings
     """
@@ -43,6 +46,7 @@ class AddBookingView(LoginRequiredMixin, CreateView):
     form_class = AddForm
     template_name = 'add_booking.html'
     success_url = '/view_bookings/'
+    success_message = "Booking is added."
 
     def get_initial(self):
         return {'desk_user': self.request.user}
@@ -53,7 +57,7 @@ class AddBookingView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class DeleteBooking(LoginRequiredMixin, DeleteView):
+class DeleteBooking(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     """
     Delete Bookings
     """
@@ -62,9 +66,14 @@ class DeleteBooking(LoginRequiredMixin, DeleteView):
     model = Booking
     template_name = "booking_confirm_delete.html"
     success_url = '/view_bookings/'
+    success_message = "Booking is deleted."
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(DeleteBooking, self).delete(request, *args, **kwargs)
 
 
-class UpdateBooking(LoginRequiredMixin, UpdateView):
+class UpdateBooking(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     """
     Update Bookings
     """
@@ -75,6 +84,7 @@ class UpdateBooking(LoginRequiredMixin, UpdateView):
     template_name = "booking_confirm_update.html"
     context_object_name = "booking"
     success_url = '/view_bookings/'
+    success_message = "Booking is updated."
 
     def form_valid(self, form):
         request = HttpRequest()
