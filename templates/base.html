@@ -24,39 +24,41 @@
   </head>
   <body>
   <header> 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/smithfield-square_logo.png' %}" class="company-logo" alt=""></a>
+    <nav class="navbar navbar-expand-md navbar-dark justify-content-center fixed-top bg-dark">
+      <a class="d-flex w-50 mr-auto" href="{% url 'home' %}"><img src="{% static 'img/smithfield-square_logo.png' %}" class="company-logo" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link active px-4" aria-current="page" href="{% url 'home' %}">Home</a>
+      <div class="navbar-collapse collapse w-100" id="navbarCollapse">
+        <ul class="navbar-nav w-100 text-left justify-content-center">
+          <li class="nav-item pr-3">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
           </li>
           {% if request.user.is_authenticated %}
-            <li class="nav-item"> 
-              <a class="nav-link px-4" href="{% url 'account_logout' %}">Logout</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-4" href="{% url 'view_bookings' %}">My Bookings</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-4" href="{% url 'add_booking' %}">Add a Booking</a>
-            </li>
-            <li class="nav-item ml-4"> 
-              <img src="{% static 'img/user.png' %}" width="30" height="30" alt="">
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-4">{{request.user.username}}</a>
-            </li>
+          <li class="nav-item pr-3">
+            <a class="nav-link" href="{% url 'view_bookings' %}">Bookings</a>
+          </li>
+          <li class="nav-item pr-3"> 
+            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+          </li>
           {% else %}
-            <li class="nav-item">
-                <a class="nav-link px-4" href="{% url 'account_signup' %}">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="px-4 btn btn-lg" href="{% url 'account_login' %}">Login</a>
-            </li>
+          <li class="nav-item pr-3">
+            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+          </li>
+          <li class="nav-item pr-3">
+            <a class="px-4 btn btn-lg" href="{% url 'account_login' %}">Login</a>
+          </li>
+          {% endif %}
+        </ul>
+        <ul class="nav navbar-nav ml-auto text-left w-100 justify-content-end">
+          {% if request.user.is_authenticated %}
+          <li class="nav-item"> 
+            <a class="nav-link">Logged in user: {{request.user.username}}</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link">User is logged out</a>
+          </li>
           {% endif %}
         </ul>
       </div>

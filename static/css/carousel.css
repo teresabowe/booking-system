@@ -39,6 +39,9 @@ body {
     height: 15px;
   }
 
+  .logged-in-user {
+    color: #6C5149
+  }
 
   /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
@@ -187,8 +190,8 @@ body {
     }
     /* Bump up size of company logo */
     img.company-logo {
-      width: 300px;
-      height: 30px;
+      width: 250px;
+      height: 20px;
     }
   }
   
