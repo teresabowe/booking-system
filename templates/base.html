@@ -53,11 +53,11 @@
         <ul class="nav navbar-nav ml-auto text-left w-100 justify-content-end">
           {% if request.user.is_authenticated %}
           <li class="nav-item"> 
-            <a class="nav-link">Logged in user: {{request.user.username}}</a>
+            <a class="logged-in-user">Logged in user: {{request.user.username}}</a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link">User is logged out</a>
+            <a class="logged-in-user">User is logged out</a>
           </li>
           {% endif %}
         </ul>

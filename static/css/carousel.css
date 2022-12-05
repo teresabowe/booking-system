@@ -39,8 +39,8 @@ body {
     height: 15px;
   }
 
-  .logged-in-user {
-    color: #6C5149
+  a.logged-in-user {
+    color: #9db294;
   }
 
   /* CUSTOMIZE THE CAROUSEL
