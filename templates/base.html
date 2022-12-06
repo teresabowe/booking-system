@@ -72,13 +72,10 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             {% for message in messages %}
-              <div class="alert {{ message.tags }} alert-dismissible fade show mt-4" id="msg" role="alert">
+            <div class="alert {{ message.tags }} alert-dismissible mt-4 fade show" id="msg" role="alert">
                 {{ message | safe }}
-                <button type="button" class="close" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            </div>
             {% endfor %}
         </div>
     </div>
