@@ -18,6 +18,9 @@
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+    <!-- Fontawesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="{% static 'css/carousel.css' %}">
 
@@ -89,19 +92,52 @@
       
   </main>
 <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container">
-          <p class="float-right"><a href="{% url 'home' %}">Back to top</a></p>
-          <p>&copy; 2022 TBowe.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <!-- Phone -->
+        <i class="mr-2 bi bi-telephone"></i>
+        <a href="tel:353-1-70754321">+353 1 70754321</a>
+        </div>
+        <div class="col-md-4 text-center">
+          <!-- Email -->
+          <i class="mr-2 bi bi-envelope"></i>
+          <a href="mailto:info@ssquare.com" target="_blank" rel="noopener noreferrer">info@ssquare.com</a>
+        </div>
+        <div class="col-md-4 text-center">
+          <!-- Facebook -->
+          <a href="https://facebook.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (opens in a new tab)">
+                        <i class="mr-4 fab fa-facebook-f"></i></a>
+          <!-- Twitter -->
+          <a href="https://twitter.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Twitter page (opens in a new tab)">
+                        <i class="mr-4 fab fa-twitter"></i></a>
+          <!-- Linkedin -->
+          <a href="https://Linkedin.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Linkedin page (opens in a new tab)">
+                        <i class="mr-4 fab fa-linkedin-in"></i></a>
+          <!-- Instagram -->
+          <a href="https://instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Instagram page (opens in a new tab)">
+                        <i class="fab fa-instagram"></i></a>
+        </div>
       </div>
-    </footer>
-    <script>
-      setTimeout(function () {
-          let messages = document.getElementById('msg');
-          let alert = new bootstrap.Alert(messages);
-          alert.close();
+     <div class="row">
+        <div class="col-md-12 text-center">
+          <a>&copy; 2022 TBowe.</a>
+        </div> 
+      </div>
+    </div>
+  </footer>
+  <script>
+    setTimeout(function () {
+      let messages = document.getElementById('msg');
+      let alert = new bootstrap.Alert(messages);
+      alert.close();
       }, 2500);
-    </script>
+  </script>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
