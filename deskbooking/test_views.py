@@ -59,7 +59,7 @@ class TestAppModels(TestCase):
         self.client.force_login(user=self.testuser)
         response = self.client.get(reverse("view_bookings"))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, '<h2>My Bookings</h2>')
+        self.assertContains(response, 'My Bookings')
 
     def test_authenticated_user_can_see_add_booking_page(self):
         """
