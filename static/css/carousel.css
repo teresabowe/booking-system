@@ -220,9 +220,9 @@ body {
     }
   }
 
-  /* For smaller size screens size from 480px wide and down */
+  /* For smaller size screens size from 768px wide and down */
 
-  @media only screen and (max-width:480px) {
+  @media only screen and (max-width:768px) {
 
     .first-slide {
       transform: translate(-40%);
