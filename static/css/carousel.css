@@ -23,7 +23,7 @@ body {
   }
 
   .btn {
-    background-color: #406735;
+    background-color: #5E9354;
     color:white;
     font-weight: 400;
     font-family: "Segoe UI", Roboto, Arial;  
@@ -35,7 +35,7 @@ body {
 
   .btn:hover {
     color:white;
-    background-color: #699e5a;
+    background-color: #91a78b;
   }
 
   img.company-logo {
@@ -44,7 +44,7 @@ body {
   }
 
   a.logged-in-user {
-    color: #9db294;
+    color: #ADC3C7;
   }
 
   /* CUSTOMIZE THE CAROUSEL
@@ -131,7 +131,7 @@ body {
   -------------------------------------------------- */
 
   .btn-signup {
-    background-color: #406735;
+    background-color: #5E9354;
     color:#fff;
   }
 
@@ -152,7 +152,7 @@ body {
     bottom: 0;
     width: 100%;
     line-height: 35px; /* Vertically center the text there */
-    background-color: lightgrey;
+    background-color: #DFE3D9;
     color: rgb(48, 46, 46);
   }
 
@@ -163,7 +163,7 @@ body {
   /* Table style
   -------------------------------------------------- */
   h4 .add-button {
-    color: darkgreen;
+    color: #5E9354;
   }
 
   table {
@@ -172,16 +172,16 @@ body {
   }
 
   thead th {
-    background-color: #406735;
+    background-color: #5E9354;
     color: white;
   }
 
   tbody td {
-    background-color: #d1e0e2;
+    background-color: #EEFAE9;
   }
 
   .bi-x-circle {
-    color: #f1698e;
+    color: red;
   }
     
   .table td, .table th {
