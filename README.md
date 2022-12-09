@@ -249,25 +249,67 @@ Once the booking is confirmed for deletion, a message will show that the booking
 
 ### Future Features
 
+The following features will be delivered in future iterations of the project.
 
+- An office manager capacity reporting tool for the office spaces.
+
+- An office manager desk management front-end.  This would mean that it would be possible for the office manager to create, read, update and delete desks without using the admin panel.
+
+- An office manager bookings management front end.  This involves enhancing the current user front end to handle the management of all user bookings.
+
+- The end user would be able to manage their user profile including changing their password.
 
 ## Technologies Used
 
 ### Languages
 
-- 
+- [Python](https://www.python.org/) 3.2 was used to develop the application backend.  The following are the python modules and packages used in the project:
+
+  - asgiref==3.5.2
+  - cloudinary==1.30.0
+  - dj-database-url==0.5.0
+  - dj3-cloudinary-storage==0.0.6
+  - Django==3.2.16
+  - django-allauth==0.51.0
+  - django-crispy-forms==1.14.0
+  - gunicorn==20.1.0
+  - oauthlib==3.2.2
+  - psycopg2==2.9.5
+  - PyJWT==2.6.0
+  - python3-openid==3.2.0
+  - pytz==2022.6
+  - requests-oauthlib==1.3.1
+  - sqlparse==0.4.3
+
+- [HTML5](https://html.spec.whatwg.org/multipage/) for front-end development.
+
+- [CSS](https://www.w3.org/Style/CSS/) to style the HTML pages
+
+- [JavaScript](https://www.javascript.com//) no was used to create custom dropdown menus in forms
 
 ### Frameworks
 
-- 
+- [Django](https://docs.djangoproject.com/en/3.2/) v3.2.16
+- [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) v4.6.2
 
 ### Database
 
-- 
+- [SQLite](https://www.sqlite.org/index.html) for automated testing locally
+- [PostgreSQL](https://www.postgresql.org/)from [ElephantSQL](https://www.elephantsql.com/) for live database
 
 ### Other
 
-- 
+- [Heroku](https://www.heroku.com/) was used to host the deployed site
+- [Cloudinary](https://cloudinary.com/) is hosting the static files
+- [Gitpod](https://www.gitpod.io/) VS Code Browser as the IDE/Editor
+- [Git](https://git-scm.com/) was used for version control 
+- [GitHub](https://github.com/) is the repository for the code
+- [Coverage](https://coverage.readthedocs.io/) was used to gauge the effectiveness of tests
+- [W3C Markup Validation Service](https://validator.w3.org/)
+- [W3C CSS Validation Service(Jigsaw)](https://jigsaw.w3.org/css-validator/)
+- [PEP8](https://www.python.org/dev/peps/pep-0008/) to validate Python
+- [Coolors](https://coolors.co/) generate the colour palette used on the site
+- [Balsamiq](https://balsamiq.com/) for developing the wireframes
 
 ## Testing
 
