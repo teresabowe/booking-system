@@ -174,7 +174,7 @@ If the user is unregistered or logged out the call to action button here will pr
 
 If the user is registered and logged in the call to action button here will prompt the user to visit the bookings page.
 
-![Logged In Office Space Options](/documentation/screenshots/logged-out-office-options.png)
+![Logged In Office Space Options](/documentation/screenshots/logged-in-office-options.png)
 
 On slide three, all users regardless of their registration status are presented with an opportunity to have a look at the location details of the offices and the various transport and dining services close by.   The call to action button for location link is green.
 
