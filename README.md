@@ -114,7 +114,7 @@ The overall design aims to present a simple, clean website which demonstrates th
 
 __Colours__
 
-Once the landing page carousel image was chosen, it was uploaded to the Coolers colour palette generator to develop the colour scheme.  This colour scheme was then applied to elements of the landing and bookings pages.
+Once the landing page carousel image was chosen, it was uploaded to the Coolers colour palette generator to develop the colour scheme.  This colour scheme was then applied to elements of the landing and booking pages.
 
 ![Coolors Palette](/documentation/screenshots/coolors-palette.png)
 
@@ -132,8 +132,123 @@ The office-related images chosen for the website aim to show that there is a wid
 
 ### Existing Features
 
+__Navigation Bar__
+
+The navigation bar is present on all pages.  It remains at the top of the page at all times to allow the user to navigate easily around the site.
+
+Along with being a marketing tool, the company logo serves as a home page link.
+
+![Navigation Bar](/documentation/screenshots/logo.png)
+
+All visitors both registered and unregistered are initially presented with an opportunity to register and login.  The Login button is highlighted in green so there is a clear call to action for registered users to login. The user status on the right side shows a logged-out status.
+
+![Navigation Bar](/documentation/screenshots/logged-out-user.png)
+
+The registered logged-in user is presented with an opportunity to visit the bookings page and logout.  The user status on the right side shows a logged-in status.
+
+![Navigation Bar](/documentation/screenshots/logged-in-user.png)
+
+__Footer__
+
+The footer is present on all pages.  There is an opportunity presented here to call, email, or contact the company on social media platforms.
+
+![Footer](/documentation/screenshots/footer.png)
+
+__Carousel__
+
+There are three slides in the carousel and all have a clear call to action for the user depending on the user's status.  
+
+On slide one, the unregistered or logged-out visitor is presented with an opportunity to login.  The call to action button for login is green.  The user must enter their username and password to login.
+
+![Carousel Slide One](/documentation/screenshots/carousel-slide-1.png)
+
+If the user is unregistered the login page shows a link for the user to register.  
+
+On slide two, all users regardless of their registration status are presented with an opportunity to have a look at the office spaces available.   The options call to action button is green in colour.
+
+![Carousel Slide Two](/documentation/screenshots/carousel-slide-2.png)
+
+If the user is unregistered or logged out the call to action button here will prompt the user to login.
+
+![Logged Out Office Space Options](/documentation/screenshots/logged-out-office-options.png)
+
+If the user is registered and logged in the call to action button here will prompt the user to visit the bookings page.
+
+![Logged In Office Space Options](/documentation/screenshots/logged-out-office-options.png)
+
+On slide three, all users regardless of their registration status are presented with an opportunity to have a look at the location details of the offices and the various transport and dining services close by.   The call to action button for location link is green.
+
+![Carousel Slide Three](/documentation/screenshots/carousel-slide-3.png)
+
+__User Authentication__
+
+To make a booking on the site all users must register on the site.  The user must enter an email address, username, and password to register.
+
+![User Registration](/documentation/screenshots/user-registration.png)
+
+Once the user has registered, a message will confirm registration and logged-in status.
+
+![User Registration Confirmation](/documentation/screenshots/user-registration-confirmation.png)
+
+The navigation bar will also show the logged-in status of the user.
+
+![Logged In User Status](/documentation/screenshots/logged-in-user-status.png)
+
+To login at any time, the user will be prompted to enter a username and password.
+
+![User Login](/documentation/screenshots/user-login.png)
+
+Once the user has logged in, a message will confirm the logged-in status.
+
+![User Login Confirmation](/documentation/screenshots/user-login-confirmation.png)
+
+To logout, the user will be asked to confirm that they wish to logout.
+
+![User Logout](/documentation/screenshots/user-logout.png)
+
+Once the user has logged out, a message will confirm the logged-out status.
+
+![User Logout](/documentation/screenshots/user-logout-confirmation.png)
+
+The navigation bar will also show the logged-out status of the user.
+
+![Logged Out User Status](/documentation/screenshots/logged-out-user-status.png)
+
+__Bookings__
+
+The user must be logged in to access the bookings page.  The page can be opened from the navigation bar.  It is also available on the green call to action button on slide one of the carousel and again if the logged-in user is viewing the office space options on the home page.
+
+The bookings are presented in ascending date order.  There are options to add a booking, edit a booking and delete a booking on this page.  To add a booking the user clicks on the green plus sign beside the add a booking heading.  A booking can be edited by clicking on the pencil-square blue button beside the booking.  A booking can be deleted by clicking on the x-circle button beside the booking.
+
+![Bookings Page](/documentation/screenshots/bookings-page.png)
+
+On the add booking screen, the user must select the booking date and then choose the desk or meeting room they wish to book.  Only available desks and rooms will be shown on the dropdown list.  Multiple bookings are allowed for the same day as a user may wish to book both a desk and a meeting room on the same day.
+
+![Add Booking Page](/documentation/screenshots/add-a-booking.png)
+
+Once the booking is saved, a message will confirm the booking is added.
+
+![Add Booking Confirmation](/documentation/screenshots/add-a-booking-confirmation.png)
+
+When the user selects to edit a booking, they can select the new desk or office from the dropdown menu.  It is also possible to change the date on the booking along with the desk or office.  Once the date is selected, the database is checked for available desks and offices on the date.  The dropdown menu is only presented after this database check is completed.
+
+![Edit Booking](/documentation/screenshots/edit-a-booking.png)
+
+Once the booking is saved, a message will confirm the booking is updated.
+
+![Edit Booking Confirmation](/documentation/screenshots/edit-a-booking-confirmation.png)
+
+To delete a booking on the delete booking screen, the user must click on the confirm button.
+
+![Delete Booking](/documentation/screenshots/delete-a-booking.png)
+
+Once the booking is confirmed for deletion, a message will show that the booking is deleted.
+
+![Delete Booking Confirmation](/documentation/screenshots/delete-a-booking-confirmation.png)
+
 
 ### Future Features
+
 
 
 ## Technologies Used
