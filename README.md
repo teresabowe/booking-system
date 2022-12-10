@@ -148,6 +148,16 @@ The registered logged-in user is presented with an opportunity to visit the book
 
 ![Navigation Bar](/documentation/screenshots/logged-in-user.png)
 
+The mobile view for the navigation bar shows a hamburger menu.
+
+![Mobile Navigation Bar](/documentation/screenshots/mobile-navbar.png)
+
+The dropdown changes depending on whether the user is logged in or logged out.
+
+v![Mobile Navigation Bar Logged Out](/documentation/screenshots/mobile-navbar-logged-out.png)
+
+![Mobile Navigation Bar Logged In](/documentation/screenshots/mobile-navbar-logged-in.png)
+
 __Footer__
 
 The footer is present on all pages.  There is an opportunity presented here to call, email, or contact the company on social media platforms.
