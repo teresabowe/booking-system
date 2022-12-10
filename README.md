@@ -154,7 +154,7 @@ The mobile view for the navigation bar shows a hamburger menu.
 
 The dropdown changes depending on whether the user is logged in or logged out.
 
-v![Mobile Navigation Bar Logged Out](/documentation/screenshots/mobile-navbar-logged-out.png)
+![Mobile Navigation Bar Logged Out](/documentation/screenshots/mobile-navbar-logged-out.png)
 
 ![Mobile Navigation Bar Logged In](/documentation/screenshots/mobile-navbar-logged-in.png)
 
