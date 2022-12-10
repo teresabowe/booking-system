@@ -342,7 +342,305 @@ The coverage report for automated testing is as follows:
 
 </details>
 
+### Manual Testing
+<details><summary>User Story Testing</summary>
 
+Epic: Setup Site Administration to Manage Desks and Bookings 
+
+To start testing, complete the following steps:
+1. Go to the application web page on ** link
+2. Select Login from the navigation bar
+3. Login in as admin
+4. Go to the application web page for the admin ** link
+
+User Story: As a site administrator, I can CRUD desks so that I can manage site content <a href="https://github.com/teresabowe/booking-system/issues/3" data-hovercard-type="issue" data-hovercard-url="/teresabowe/booking-system/issues/3/hovercard">#3</a>
+
+**Add a desk**
+
+Testing procedure:
+1. Click on the Add button beside Desks
+2. Enter the Desk, Floor, and Description
+3. Click on the SAVE button
+
+![Add Booking](/documentation/screenshots/site-administration-desk-add.png) 
+
+Expected Result: A new desk is created and is visible on the site administration desk list
+
+Actual Result: A new desk is created and is visible on the site administration desk list
+
+![Add Booking](/documentation/screenshots/site-administration-desk-add-list.png) 
+
+Pass/Fail: Pass
+
+**Update a desk**
+
+Testing procedure:
+1. Click on the Desk D3001 from the site administration desk list
+2. Change the description from 'Window Desk on 3rd Floor' to 'Window Desk'
+3. Click on the SAVE button
+
+![Add Booking](/documentation/screenshots/site-administration-desk-update.png) 
+
+Expected Result: The desk is updated and is visible with the new description on the site administration desk list
+
+Actual Result: The desk is updated and is visible with the new description on the site administration desk list
+
+![Add Booking List](/documentation/screenshots/site-administration-desk-update-list.png) 
+
+Pass/Fail: Pass
+
+**Delete a desk**
+
+Testing procedure:
+1. Click on the Desk D3001 from the site administration desk list
+2. Click on Delete
+3. Confirm deletion
+
+![Delete Booking](/documentation/screenshots/site-administration-desk-delete.png) 
+![Delete Booking Confirmation](/documentation/screenshots/site-administration-desk-delete-confirmation.png)
+
+Actual Result: The desk is no longer visible on the site administration desk list
+
+Expected Result: The desk is no longer visible on the site administration desk list
+
+![Delete Booking List](/documentation/screenshots/site-administration-desk-delete-list.png)
+
+Pass/Fail: Pass
+
+**
+
+User Story: As a site administrator, I can CRUD bookings so that manage my customer's needs <a href="https://github.com/teresabowe/booking-system/issues/4" data-hovercard-type="issue" data-hovercard-url="/teresabowe/booking-system/issues/4/hovercard">#4</a>
+
+**Add a booking**
+
+Testing procedure:
+1. Click on the Add button beside bookings
+2. Enter the Desk booking date, Desk, and Desk user
+3. Click on the SAVE button
+
+![Delete Booking List](/documentation/screenshots/site-administration-booking-add.png)
+
+Expected Result: A new booking is created and is visible on the site administration desk list
+
+Actual Result: A new booking is created and is visible on the site administration desk list
+
+![Delete Booking List](/documentation/screenshots/site-administration-booking-add-list.png)
+
+Pass/Fail: Pass
+
+**Update a booking**
+
+Testing procedure:
+1. Click on the Desk D2004 for 22/12/2022 from the site administration bookings list
+2. Change the Desk booking date from 22/12/2022 to 23/12/2022
+3. Click on the SAVE button
+
+![Update Booking](/documentation/screenshots/site-administration-booking-update.png)
+
+Expected Result: The updated booking is updated and is visible on the site administration desk list
+
+Actual Result: The updated booking is updated and is visible on the site administration desk list
+
+![Update Booking List](/documentation/screenshots/site-administration-booking-update-list.png)
+
+Pass/Fail: Pass
+
+**Delete a booking**
+
+Testing procedure:
+1. Click on the Booking for Desk 2004 from the site administration bookings list
+2. Click on Delete
+3. Confirm deletion
+
+![Delete Booking](/documentation/screenshots/site-administration-booking-delete.png)
+![Delete Booking Confirm](/documentation/screenshots/site-administration-booking-delete-confirm.png)
+
+Expected Result: The booking is no longer visible on the site administration bookings list
+
+Actual Result: The booking is no longer visible on the site administration bookings list
+
+![Delete Booking List](/documentation/screenshots/site-administration-booking-delete-list.png)
+
+Pass/Fail: Pass
+
+Epic: User Authentication
+
+User Story: As a site visitor, I can register on the site so that I can access the site services <a href="https://github.com/teresabowe/booking-system/issues/6" data-hovercard-type="issue" data-hovercard-url="/teresabowe/booking-system/issues/6/hovercard">#6</a>
+
+**Register**
+
+Testing procedure:
+1. Click on the Register button on the navigation bar
+2. Enter the Email address, username, and password twice
+3. Click on the Confirm button
+
+Expected Result: 
+
+1. A message is shown to indicate that a confirmation email is sent to the user  
+2. A second message is shown to indicate that the newly registered user is also logged in to the site
+3. The navigation bar shows the username of the logged-in user
+4. The navigation bar Register link on the navigation bar has changed to Bookings
+5. The navigation bar Login link on the navigation bar has changed to Logout
+
+Actual Result: 
+
+1. A message is shown to indicate that a confirmation email is sent to the user 
+2. A second message is shown to indicate that the newly registered user is also logged in to the site
+3. The navigation bar shows the username of the logged-in user
+4. The navigation bar Register link on the navigation bar has changed to Bookings
+5. The navigation bar Login link on the navigation bar has changed to Logout
+
+Pass/Fail: Pass
+
+User Story: As a registered user, I can login so that I have access to my content <a href="https://github.com/teresabowe/booking-system/issues/7" data-hovercard-type="issue" data-hovercard-url="/teresabowe/booking-system/issues/7/hovercard">#7</a>
+
+**Login**
+
+Testing procedure:
+1. Click on the Login button on the navigation bar
+2. Enter the username and password
+3. Click on the Login button
+
+Expected Result: 
+
+1. A message is shown to indicate that the user has successfully signed in 
+2. The navigation bar shows the username of the logged-in user
+3. The navigation bar Register link on the navigation bar has changed to Bookings
+4. The navigation bar Login link on the navigation bar has changed to Logout
+
+Actual Result: 
+
+1. A message is shown to indicate that the user has successfully signed in
+2. The navigation bar shows the username of the logged-in user
+3. The navigation bar Register link on the navigation bar has changed to Bookings
+4. The navigation bar Login link on the navigation bar has changed to Logout
+
+Pass/Fail: Pass
+
+User Story: As a registered user, I can logout of my account so that my content is kept secure <a href="https://github.com/teresabowe/booking-system/issues/8" data-hovercard-type="issue" data-hovercard-url="/teresabowe/booking-system/issues/8/hovercard">#8</a>
+
+**Logout**
+
+Testing procedure:
+1. Click on the Logout button on the navigation bar
+2. Confirm logging out by clicking on the Logout button
+
+Expected Result: 
+
+1. A message is shown to indicate that the user has successfully logged out
+2. The navigation bar shows that the user is logged out
+3. The navigation bar bookings link on the navigation bar has changed to Register
+4. The navigation bar Logout link has changed to Login
+
+Actual Result: 
+
+1. A message is shown to indicate that the user has successfully logged out
+2. The navigation bar shows that the user is logged out
+3. The navigation bar bookings link on the navigation bar has changed to Register
+4. The navigation bar Logout link has changed to Login
+
+Pass/Fail: Pass
+
+Epic: Create Landing Page
+
+User Story: As a site visitor, I can access the landing page so that I can understand the purpose of the site and take appropriate actions <a href="https://github.com/teresabowe/booking-system/issues/5" data-hovercard-type="issue" data-hovercard-url="/teresabowe/booking-system/issues/5/hovercard">#5</a>
+
+Testing procedure:
+1. Enter the URL for the booking application as https://deskbooking.herokuapp.com/
+
+Expected Result: 
+
+1. The landing page carousel slide 1 hero image text indicates that a workspace can be booked.  
+2. A call to action on slide 1 invites the user to Login.  If the user is not registered then there is a link to register from the login page.
+3. The landing page carousel slide 2 hero image text indicates that there are private offices and workspaces. 
+4. A call to action on slide 2 invites the user to have a further look at the options available.  
+5. The landing page carousel slide 3 hero image text and call to action invites the user to learn more about the location.
+
+Actual Result: 
+
+1. The landing page carousel slide 1 hero image text indicates that a workspace can be booked.  
+2. A call to action on slide 1 invites the user to Login.  If the user is not registered then there is a link to register from the login page.
+3. The landing page carousel slide 2 hero image text indicates that there are private offices and workspaces. 
+4. A call to action on slide 2 invites the user to have a further look at the options available.  
+5. The landing page carousel slide 3 hero image text and call to action invites the user to learn more about the location.
+
+Pass/Fail: Pass
+
+Epic: User Bookings Management
+
+User Story: As a registered user I can create, read, update and delete my bookings so that I can maintain an accurate record of my use of the desk space (must-have/complete) <a href="https://github.com/teresabowe/booking-system/issues/9" data-hovercard-type="issue" data-hovercard-url="/teresabowe/booking-system/issues/9/hovercard">#9</a>
+
+**Add Booking**
+
+Testing procedure:
+1. Select the Login link from the navigation bar
+2. Select the Bookings link from the navigation bar
+3. Click on the green plus icon beside "Add a Booking"
+4. Select a desk booking date and desk
+5. Click Save
+
+Expected Result: 
+
+1. A message indicating that the booking is added is shown 
+2. The booking detail is now shown on the list of bookings
+
+Actual Result: 
+
+1. A message indicating that the booking is added is shown 
+2. The booking detail is now shown on the list of bookings
+
+![Registered User Booking Add](/documentation/screenshots/registered-user-booking-add.png)
+
+Pass/Fail: Pass
+
+**Add Booking**
+
+Testing procedure:
+1. Select the Login link from the navigation bar
+2. Select the Bookings link from the navigation bar
+3. Click on the Edit button which is a pencil-square blue button beside the booking
+4. Update the desk booking date or the desk or both
+5. Click Save
+
+Expected Result: 
+
+1. A message indicating that the booking is updated is shown 
+2. The new booking detail is now shown on the list of bookings
+
+Actual Result: 
+
+1. A message indicating that the booking is updated is shown 
+2. The new booking detail is now shown on the list of bookings
+
+Pass/Fail: Pass
+
+**Delete Booking**
+
+Testing procedure:
+1. Select the Login link from the navigation bar
+2. Select the Bookings link from the navigation bar
+3. Click on the Delete button which is a red x-circle button beside the booking
+4. Click Confirm
+
+Expected Result: 
+
+1. A message indicating that the booking is deleted is shown 
+2. The booking has now been removed from the list of bookings
+
+Actual Result: 
+
+1. A message indicating that the booking is deleted is shown 
+2. The booking has now been removed from the list of bookings
+
+Pass/Fail: Pass
+
+</details>
+
+<details><summary></summary>
+
+
+
+</details>
 
 ### Validator Testing
 
