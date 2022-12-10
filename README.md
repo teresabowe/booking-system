@@ -323,12 +323,26 @@ The following features will be delivered in future iterations of the project.
 
 ## Testing
 
+### Automated Testing
+<details><summary>Details of automated testing with coverage of 91%.</summary>
 
-### Features Testing
+To setup the local environment for testing, the following adjustment was made to the settings.py file
 
-<details>
-  <summary></summary>
+![Change settings.py](/documentation/screenshots/settings-py-for-testing.png) 
+
+Also, the following was added to the env.py file:
+
+![Change env.py](/documentation/screenshots/env-py-for-testing.png) 
+
+When not testing, os.environ["DEVELOPMENT"] can be changed back to "False".
+
+The coverage report for automated testing is as follows:
+
+![Coverage Report](/documentation/screenshots/coverage-report.png) 
+
 </details>
+
+
 
 ### Validator Testing
 
