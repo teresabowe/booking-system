@@ -636,9 +636,192 @@ Pass/Fail: Pass
 
 </details>
 
+<details><summary>Features Testing</summary>
+
+**Home Page Company Logo**
+
+- When clicked the company logo returns the user to the home page
+
+Testing procedure:
+1. From the Bookings page click on the company logo "SmithfieldSquare" on the navigation bar
+
+Expected Result: 
+
+1. The user is returned to the home page
+
+Actual Result: 
+
+1. The user is returned to the home page
+
+Pass/Fail: Pass
+
+**Footer Social Media Links**
+
+- When clicked the social media links take the user to the correct sites
+
+Testing procedure:
+1. From the footer click on all of the social media links
+
+Expected Result: 
+
+1. The user is sent to the correct social media page
+
+Actual Result: 
+
+1. The user is sent to the correct social media page
+
+Pass/Fail: Pass
+
+**Footer Email Link**
+
+- When clicked the email link opens a mailto link
+
+Testing procedure:
+1. From the footer click on the email address
+
+Expected Result: 
+
+1. The user is directed to the default mailto email provider or receives an "Add an Account" message if no default exists
+
+Actual Result: 
+
+1. The user is directed to the default mailto email provider or receives an "Add an Account" message if no default exists
+
+Pass/Fail: Pass
+
+**Footer Phone Link on Mobile**
+
+- When clicked on a mobile phone the link suggests to call the number listed
+
+Testing procedure:
+1. From the footer click on the phone number
+
+Expected Result: 
+
+1. When clicked on a mobile phone the link suggests to call the number listed
+
+Actual Result: 
+
+1. When clicked on a mobile phone the link suggests to call the number listed
+
+Pass/Fail: Pass
+Note: This phone link is also available on a desktop.  While it is possible to disable it there may be some users who wish to call by using a phone app such as Meta WhatsApp or Microsoft Phone Link. This has not been tested to date.
+
+**Add Booking Shows Available Desks Only**
+
+- On Add Booking the dropdown menu for desks only shows available desks
+
+Testing procedure:
+1. Have a look at the bookings listed on the Bookings page 
+2. Take note of a date and desk already booked
+3. Click on the green plus icon beside "Add a Booking"
+4. Choose the date observed above
+5. Click on the Desk dropdown list
+
+Expected Result: 
+
+1. The dropdown list does not show the desk observed above as it is already booked on that date
+
+Actual Result: 
+
+1. The dropdown list does not show the desk observed above as it is already booked on that date
+
+![Registered User Booking Add](/documentation/screenshots/registered-user-booking-list-check-dropdown.png)
+![Registered User Booking Add](/documentation/screenshots/registered-user-booking-add-booking-check-dropdown.png)
+
+Pass/Fail: Pass
+
+**Update Booking Shows Available Desks Only**
+
+- On Update Booking the dropdown menu for desks only shows available desks
+
+Testing procedure:
+1. Have a look at the bookings listed on the Bookings page 
+2. Take note of a date and desk already booked
+3. Click on the update button, the pencil-square blue button beside the booking
+4. Choose the date observed above
+5. Click on the Desk dropdown list
+
+Expected Result: 
+
+1. The dropdown list does not show the desk observed above as it is already booked on that date
+
+Actual Result: 
+
+1. The dropdown list does not show the desk observed above as it is already booked on that date
+
+Pass/Fail: Pass
+
+**Unregistered User Opens Bookings URL**
+
+- An unregistered user is redirected to the Login URL when attempting to browse to the view_bookings URL
+
+Testing procedure:
+1. Enter the https://deskbooking.herokuapp.com/view_bookings URL 
+
+Expected Result: 
+
+1. The user is redirected to the Login page
+
+Actual Result: 
+
+1. The user is redirected to the Login page
+
+Pass/Fail: Pass
+
+**Unregistered User Opens an Invalid URL**
+
+- Work in Progress
+
+**Bad Email Address on Registration**
+
+- When a bad Email address is entered the user is prompted to correct it 
+
+Testing procedure:
+1. Select Register from the navigation bar
+2. Enter an incorrect Email address i.e. exclude the @ or . or both
+3. Enter the username
+4. Enter the password twice. It must contain at least 8 characters.  It must not be too common.
+5. Click Register
+
+Expected Result: 
+
+1. The user is prompted to correct the email address
+2. Registration is not completed until the correct format for the email address is entered
+
+Actual Result: 
+
+1. The user is prompted to correct the email address
+2. Registration is not completed until the correct format for the email address is entered
+
+Pass/Fail: Pass
+
+**Bad Password on Registration**
+
+- When a bad Email address is entered the user is prompted to correct it 
+
+Testing procedure:
+1. Select Register from the navigation bar
+2. Enter a correct email address
+3. Enter the username
+4. Enter an incorrect password i.e. enter less than 8 characters
+5. Click Register
+
+Expected Result: 
+
+1. The user is prompted to enter a password with at least 8 characters.
+2. Registration is not completed until the correct format for the password is entered
+
+Actual Result: 
+
+1. The user is prompted to enter a password with at least 8 characters.
+2. Registration is not completed until the correct format for the password is entered
+
+Pass/Fail: Pass
+
+</details>
+
 <details><summary></summary>
-
-
 
 </details>
 
