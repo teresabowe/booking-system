@@ -331,7 +331,8 @@ The following features will be delivered in future iterations of the project.
 - [Coverage](https://coverage.readthedocs.io/) was used to gauge the effectiveness of tests
 - [W3C Markup Validation Service](https://validator.w3.org/)
 - [W3C CSS Validation Service(Jigsaw)](https://jigsaw.w3.org/css-validator/)
-- [PEP8](https://www.python.org/dev/peps/pep-0008/) to validate Python
+- [PEP8](https://www.python.org/dev/peps/pep-0008/) is the standard used to validate Python
+- [CI Python Linter](https://pep8ci.herokuapp.com/) tool was used to validate the Python code
 - [Coolors](https://coolors.co/) generate the colour palette used on the site
 - [Balsamiq](https://balsamiq.com/) for developing the wireframes
 
@@ -856,6 +857,43 @@ As the development progressed, the main responsiveness issues were found with th
 </details>
 
 ### Validator Testing
+
+<details><summary>HTML Testing</summary>
+
+The URLs below were copied to the Nu Html Checker and the results show no errors or warnings.
+
+- https://deskbooking.herokuapp.com/
+- https://deskbooking.herokuapp.com/view_bookings/
+- https://deskbooking.herokuapp.com/accounts/signup/
+- https://deskbooking.herokuapp.com/accounts/login/
+- https://deskbooking.herokuapp.com/accounts/logout/
+- https://deskbooking.herokuapp.com/add_booking/
+
+Booking id 167 was chosen from the bookings list and the URLs below were copied to the Nu Html Checker.  The results shows no errors or warnings. 
+
+- https://deskbooking.herokuapp.com/167/update_booking/
+- https://deskbooking.herokuapp.com/167/delete_booking/
+
+A bad URL was entered in the address bar and the URL below was copied to the Nu Html Checker. The result shows no errors or warnings.  This is because the custom error template was loaded.
+
+- https://deskbooking.herokuapp.com/badurl/
+
+</details>
+
+<details><summary>CSS Testing</summary>
+
+The W3C CSS Validator result for carousel.css shows no error.
+
+</details>
+
+</details>
+
+<details><summary></summary>
+
+
+
+</details>
+
 
 ### Bugs and Fixes
 
