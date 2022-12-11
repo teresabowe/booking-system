@@ -102,6 +102,12 @@ The main flow for the bookings page is shown below.
 
 __Wireframes__
 
+The Bootstrap carousel example was considered for use and chosen for use early in the project.  The wireframes were drawn up with some adjustments which include square images underneath the carousel.  The final deployment of the website has centered links on the navigation bar and a user status for login on the right side.  A custom logo was also created for the home page link on the left side of the navigation bar.
+
+![Entity Relationship Diagram](/documentation/screenshots/desktop-wireframe-bookings-home-page.png)
+![Entity Relationship Diagram](/documentation/screenshots/desktop-wireframe-bookings-list-page.png)
+![Entity Relationship Diagram](/documentation/screenshots/mobile-wireframe-pages.png)
+
 __Database Schema__
 
 There are two custom models in the database schema, a desk model and a bookings model.  The desk model records all of the available desks and meeting rooms.  The bookings model handles the user bookings for the office spaces.  The django-allauth application manages the account registration and authentication so a custom model is not required in this instance.
