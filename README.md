@@ -691,18 +691,18 @@ Pass/Fail: Pass
 
 **Footer Phone Link on Mobile**
 
-- When clicked on a mobile phone the link suggests to call the number listed
+- When clicked on a mobile phone the link suggests calling the number listed
 
 Testing procedure:
 1. From the footer click on the phone number
 
 Expected Result: 
 
-1. When clicked on a mobile phone the link suggests to call the number listed
+1. When clicked on a mobile phone the link suggests calling the number listed
 
 Actual Result: 
 
-1. When clicked on a mobile phone the link suggests to call the number listed
+1. When clicked on a mobile phone the link suggests calling the number listed
 
 Pass/Fail: Pass
 Note: This phone link is also available on a desktop.  While it is possible to disable it there may be some users who wish to call by using a phone app such as Meta WhatsApp or Microsoft Phone Link. This has not been tested to date.
@@ -821,7 +821,23 @@ Pass/Fail: Pass
 
 </details>
 
-<details><summary></summary>
+<details><summary>Browser Compatibility</summary>
+
+The site was developed using Google Chrome Version 108.0.5359.99 (Official Build) (64-bit).  It was also tested on Microsoft Edge Version 108.0.1462.46 (Official build) (64-bit) and Firefox Browser 107.0.1 (64-bit).  No issues were identified during this testing.
+
+</details>
+
+<details><summary>Responsiveness</summary>
+
+The Chrome Developer Tool was used to check responsiveness as the application was being developed.
+
+The following devices were also used to check responsiveness.
+
+- iPhone 13, iOS Version 16.1.1
+- Redmi Note 9, Android Version SP1A.210812.016
+- HP Pavillion Laptop Windows 11 Home 21H2 with 15" screen and Acer KG271 27" monitor
+
+As the development progressed, the main responsiveness issues were found with the bookings listings where the information presented forced a slide bar to be inserted on mobile devices.  While the slide bar allowed the user to move the view to the right, it wasn't delivering a professional product.  The solution was to merge two columns of data into one and rename the table titles.
 
 </details>
 
