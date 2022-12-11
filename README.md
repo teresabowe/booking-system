@@ -951,6 +951,26 @@ To ensure that this code continued to run smoothly the line length was not corre
 
 </details>
 
+<details><summary>Lighthouse Testing</summary>
+
+- Desktop Home Page
+
+![Desktop Home Page Lighthouse](/documentation/screenshots/lighthouse-home-page-desktop.png)
+
+- Desktop Bookings Page
+
+![Desktop Bookings Page Lighthouse](/documentation/screenshots/lighthouse-bookings-page-desktop.png)
+
+- Mobile Home Page
+
+![Mobile Home Page Lighthouse](/documentation/screenshots/lighthouse-home-page-mobile.png)
+
+- Mobile Bookings Page
+
+![Mobile Bookings Page Lighthouse](/documentation/screenshots/lighthouse-bookings-page-mobile.png)
+
+</details>
+
 ### Bugs and Fixes
 
 **User Registration**
@@ -972,26 +992,6 @@ When a bad URL address is entered on the address bar (https://deskbooking.heroku
 <details>
   <summary></summary>
 
-</details>
-
-<details>
-  <summary></summary>
-</details>
-
-<details>
-  <summary></summary>
-</details>
-
-<details>
-  <summary></summary>
-</details>
-
-<details>
-  <summary></summary>
-</details>
-
-<details>
-  <summary></summary>
 </details>
 
 ## Credits
