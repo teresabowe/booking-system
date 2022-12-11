@@ -990,7 +990,79 @@ When a bad URL address is entered on the address bar (https://deskbooking.heroku
 ## Deployment
 
 <details>
-  <summary></summary>
+  <summary>Heroku Deployment</summary>
+
+Sign up or Login to [Heroku](https://www.heroku.com/)
+From the dashboard select 'New' and 'Create New App'
+Enter the app-name and the region, then select create app. 
+Signup or Login to [ElephantSQL(https://www.elephantsql.com/)
+Click Create New Instance
+Set up the plan
+Enter a name
+Select the Tiny Turtle (Free) plan
+Choose Select Region
+Choose a data center close by
+Click Review
+Click Create instance
+Return to the ElephantSQL dashboard and click on the database instance name
+Click the copy icon to copy the database URL
+
+Back in Django in the env.py file add: 
+
+import os
+
+os.environ["DATABASE_URL"]="<copiedURL>"
+
+Replace <copiedURL> with the copied string from ElephantSQL.
+
+Enter a unique secret key:
+
+os.environ["SECRET_KEY"]="my_super^secret@key"
+
+Save the file
+
+Open up the settings.py file and add the following code below Path import:
+
+import os
+import dj_database_url
+if os.path.isfile('env.py'):
+     import env
+
+Also reference the variable in the env.py file, so change the SECRET_KEY to the following:
+
+ SECRET_KEY = os.environ.get('SECRET_KEY')
+
+Comment out the original DATABASES variable and add the code below:
+
+# DATABASES = {
+ #     'default': {
+ #         'ENGINE': 'django.db.backends.sqlite3',
+ #         'NAME': BASE_DIR / 'db.sqlite3',
+ #     }
+ # }
+    
+ DATABASES = {
+     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+ }
+
+Run python manage.py migrate from the command line
+Add, commit and push to GitHub
+Open the Settings tab in the Heroku dashboard
+Add the following config vars:
+
+DATABASE_URL, copy the database URL from ElephantSQL
+SECRET_KEY containing the secret key.
+
+Signup or login to the [Cloudinary website](https://cloudinary.com/)
+Click on the Sign Up For Free button
+Provide your name, email address and choose a password
+For Primary interest, you can choose Programmable Media for image and video API
+Click Create Account
+Verify your email and you will be brought to the dashboard
+Copy the API environment variable
+Add the API environment variable to the os.environ["CLOUDINARY_URL"] = "" in env.py
+Add CLOUDINARY_URL to the config vars in Heroku
+If there are no static files as yet add DISABLE_COLLECTSTATIC = 1 to the config vars in Heroku
 
 </details>
 
