@@ -93,7 +93,8 @@ class UpdateBooking(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
         except IntegrityError as err:
             err = 'A booking with this booking date already exists for you.'
             template_name = "integrity_error.html"
-            return render(request, template_name, context={'err': err, "request": self.request})
+            return render(request, template_name,
+                          context={'err': err, "request": self.request})
 
 
 def handler500(request, template_name='handler_500.html'):

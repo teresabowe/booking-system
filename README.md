@@ -874,7 +874,7 @@ Booking id 167 was chosen from the bookings list and the URLs below were copied 
 - https://deskbooking.herokuapp.com/167/update_booking/
 - https://deskbooking.herokuapp.com/167/delete_booking/
 
-A bad URL was entered in the address bar and the URL below was copied to the Nu Html Checker. The result shows no errors or warnings.  This is because the custom error template was loaded.
+A bad URL was entered in the address bar and the URL below was copied to the Nu Html Checker. The result shows no errors or warnings.  This is because a custom error template was loaded.
 
 - https://deskbooking.herokuapp.com/badurl/
 
@@ -888,9 +888,50 @@ The W3C CSS Validator result for carousel.css shows no error.
 
 </details>
 
-<details><summary></summary>
+<details><summary>Python Testing</summary>
 
+The PEP8 standards for Python were checked using CI Python Linter.
 
+- admin.py
+- apps.py
+- forms.py
+- models.py
+- test_models.py
+- test_views.py
+- urls.py
+- views.py
+- asgi.py
+- settings.py
+- urls.py
+- wsgi.py
+- env.py
+
+All of the above tests showed no errors with the exception of settings.py and env.py.
+
+The settings.py showed results as follows:
+
+- 132: E501 line too long (91 > 79 characters)
+- 135: E501 line too long (81 > 79 characters)
+- 138: E501 line too long (82 > 79 characters)
+- 141: E501 line too long (83 > 79 characters)
+- 162: E501 line too long (80 > 79 characters)
+
+These errors were related to the password validators and static files storage:
+
+![Line too long - password validators](/documentation/screenshots/settings-py-password-validators.png)
+![Line too long - static files](/documentation/screenshots/settings-py-static.png)
+
+To ensure that this code continued to run smoothly the line length was not corrected in the settings.py file.
+
+The env.py showed results as follows:
+
+- 3: E501 line too long (117 > 79 characters)
+- 7: E501 line too long (99 > 79 characters)
+
+![Registered User Booking Add](/documentation/screenshots/env-py-postgres.png)
+![Registered User Booking Add](/documentation/screenshots/env-py-cloudinary.png)
+
+To ensure that this code continued to run smoothly the line length was not corrected in the env.py file.
 
 </details>
 

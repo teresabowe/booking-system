@@ -1,7 +1,8 @@
 from django.contrib import admin
 from .models import Desk
 from .models import Booking
-from allauth.socialaccount.models import SocialAccount, SocialApp, SocialToken, EmailAddress
+from allauth.socialaccount.models import SocialAccount, SocialApp, \
+    SocialToken, EmailAddress
 
 
 @admin.register(Desk)
