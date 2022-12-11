@@ -104,15 +104,15 @@ __Wireframes__
 
 The Bootstrap carousel example was considered for use and chosen for use early in the project.  The wireframes were drawn up with some adjustments which include square images underneath the carousel.  The final deployment of the website has centered links on the navigation bar and a user status for login on the right side.  A custom logo was also created for the home page link on the left side of the navigation bar.
 
-**Desktop Home Page**
+_Desktop Home Page_
 
 ![Entity Relationship Diagram](/documentation/screenshots/desktop-wireframe-bookings-home-page.png)
 
-**Bookings List Page**
+_Bookings List Page_
 
 ![Entity Relationship Diagram](/documentation/screenshots/desktop-wireframe-bookings-list-page.png)
 
-**Mobile Pages**
+_Mobile Pages_
 
 ![Entity Relationship Diagram](/documentation/screenshots/mobile-wireframe-pages.png)
 
