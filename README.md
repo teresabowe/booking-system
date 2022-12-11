@@ -786,7 +786,23 @@ Pass/Fail: Pass
 
 **Unregistered User Opens an Invalid URL**
 
-- Work in Progress
+- An unregistered user is redirected to the custom error page having entered an invalid URL
+
+Testing procedure:
+1. Enter the https://deskbooking.herokuapp.com/badaddress URL 
+
+Expected Result: 
+
+1. The user is redirected to the custom error page 404
+
+Actual Result: 
+
+1. The user is redirected to the custom error page 500
+
+Pass/Fail: Fail
+Note: This error message is also recorded in the bugs section of this readme file.
+
+![Bad URL Address](/documentation/screenshots/error-bad-address.png)
 
 **Bad Email Address on Registration**
 
@@ -935,8 +951,21 @@ To ensure that this code continued to run smoothly the line length was not corre
 
 </details>
 
-
 ### Bugs and Fixes
+
+**User Registration**
+
+Once a user has registered on the site, a message will confirm registration and logged-in status.
+
+![User Registration Confirmation](/documentation/screenshots/user-registration-confirmation.png)
+
+The second message for logged-in status does not disappear after two and a half seconds.  This bug has not been resolved at the time of writing this readme.
+
+**Custom Error Pages**
+
+When a bad URL address is entered on the address bar (https://deskbooking.herokuapp.com/badaddress), the custom 500 error page is loaded.  It is the understanding that the custom 404 error message should be loaded instead.  This bug has not been resolved at the time of writing this readme.
+
+![Bad URL Address](/documentation/screenshots/error-bad-address.png)
 
 ## Deployment
 
